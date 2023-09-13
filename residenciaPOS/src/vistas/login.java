@@ -202,7 +202,6 @@ public class login extends javax.swing.JFrame {
         btnSalir.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setText("Salir");
-        btnSalir.setActionCommand("Salir");
         btnSalir.setBorderPainted(false);
         btnSalir.setFocusPainted(false);
         btnSalir.setFocusable(false);
@@ -254,6 +253,9 @@ public class login extends javax.swing.JFrame {
 
     private void btnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederActionPerformed
         // TODO add your handling code here:
+        dashboard a = new dashboard();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnAccederActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
