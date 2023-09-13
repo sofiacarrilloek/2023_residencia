@@ -4,6 +4,7 @@
  */
 package vistas;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.Toolkit;
@@ -17,6 +18,8 @@ public class dashboard extends javax.swing.JFrame {
     /**
      * Creates new form dashboard
      */
+    Color  btnColor= new Color(152,82,87);
+     Color btnColorEntered = new Color(193,142,151);
     public dashboard() {
         this.setExtendedState(MAXIMIZED_BOTH);
         initComponents();
@@ -114,7 +117,7 @@ public class dashboard extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(237, 191, 194));
 
-        btnApartados.setBackground(new java.awt.Color(155, 82, 87));
+        btnApartados.setBackground(new java.awt.Color(193, 142, 151));
         btnApartados.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnApartados.setForeground(new java.awt.Color(255, 255, 255));
         btnApartados.setText("Apartados");
@@ -162,7 +165,7 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        btnClientes1.setBackground(new java.awt.Color(155, 82, 87));
+        btnClientes1.setBackground(new java.awt.Color(193, 142, 151));
         btnClientes1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnClientes1.setForeground(new java.awt.Color(255, 255, 255));
         btnClientes1.setText("Clientes");
@@ -186,7 +189,7 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        btnInventario.setBackground(new java.awt.Color(155, 82, 87));
+        btnInventario.setBackground(new java.awt.Color(193, 142, 151));
         btnInventario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnInventario.setForeground(new java.awt.Color(255, 255, 255));
         btnInventario.setText("Inventario");
@@ -210,7 +213,7 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        btnProductos1.setBackground(new java.awt.Color(155, 82, 87));
+        btnProductos1.setBackground(new java.awt.Color(193, 142, 151));
         btnProductos1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnProductos1.setForeground(new java.awt.Color(255, 255, 255));
         btnProductos1.setText("Productos");
@@ -234,7 +237,7 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        btnCorte.setBackground(new java.awt.Color(155, 82, 87));
+        btnCorte.setBackground(new java.awt.Color(193, 142, 151));
         btnCorte.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnCorte.setForeground(new java.awt.Color(255, 255, 255));
         btnCorte.setText("Corte");
@@ -258,7 +261,7 @@ public class dashboard extends javax.swing.JFrame {
             }
         });
 
-        btnReporte.setBackground(new java.awt.Color(155, 82, 87));
+        btnReporte.setBackground(new java.awt.Color(193, 142, 151));
         btnReporte.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnReporte.setForeground(new java.awt.Color(255, 255, 255));
         btnReporte.setText("Reportes");
@@ -642,10 +645,12 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnVentasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseEntered
         // TODO add your handling code here:
+        btnVentas.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnVentasMouseEntered
 
     private void btnVentasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseExited
         // TODO add your handling code here:
+        btnVentas.setBackground(btnColor);
     }//GEN-LAST:event_btnVentasMouseExited
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed

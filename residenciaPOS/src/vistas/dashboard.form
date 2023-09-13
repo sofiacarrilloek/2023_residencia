@@ -241,7 +241,7 @@
             <Component class="javax.swing.JButton" name="btnApartados">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="57" green="52" red="9b" type="rgb"/>
+                  <Color blue="97" green="8e" red="c1" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Rounded MT Bold" size="18" style="0"/>
@@ -287,7 +287,7 @@
             <Component class="javax.swing.JButton" name="btnClientes1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="57" green="52" red="9b" type="rgb"/>
+                  <Color blue="97" green="8e" red="c1" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Rounded MT Bold" size="18" style="0"/>
@@ -310,7 +310,7 @@
             <Component class="javax.swing.JButton" name="btnInventario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="57" green="52" red="9b" type="rgb"/>
+                  <Color blue="97" green="8e" red="c1" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Rounded MT Bold" size="18" style="0"/>
@@ -333,7 +333,7 @@
             <Component class="javax.swing.JButton" name="btnProductos1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="57" green="52" red="9b" type="rgb"/>
+                  <Color blue="97" green="8e" red="c1" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Rounded MT Bold" size="18" style="0"/>
@@ -356,7 +356,7 @@
             <Component class="javax.swing.JButton" name="btnCorte">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="57" green="52" red="9b" type="rgb"/>
+                  <Color blue="97" green="8e" red="c1" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Rounded MT Bold" size="18" style="0"/>
@@ -379,7 +379,7 @@
             <Component class="javax.swing.JButton" name="btnReporte">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="57" green="52" red="9b" type="rgb"/>
+                  <Color blue="97" green="8e" red="c1" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Rounded MT Bold" size="18" style="0"/>

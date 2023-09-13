@@ -177,6 +177,7 @@ public class login extends javax.swing.JFrame {
         btnAcceder.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         btnAcceder.setForeground(new java.awt.Color(255, 255, 255));
         btnAcceder.setText("Acceder");
+        btnAcceder.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAcceder.setBorderPainted(false);
         btnAcceder.setFocusPainted(false);
         btnAcceder.setFocusable(false);
