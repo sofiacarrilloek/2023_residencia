@@ -4,6 +4,11 @@
  */
 package vistas;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+
+
 /**
  *
  * @author sofia
@@ -14,6 +19,17 @@ public class cerrarPrograma extends javax.swing.JFrame {
      * Creates new form cerrarPrograma
      */
     public cerrarPrograma() {
+        //Elimina la barra de titulos
+        this.setUndecorated(true);
+        
+        // Centra el JFrame en la pantalla
+            Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+            int height = pantalla.height;
+            int width = pantalla.width;
+            setSize(width/2, height/2);		
+
+            setLocationRelativeTo(null);	
+        
         initComponents();
     }
 
@@ -34,7 +50,6 @@ public class cerrarPrograma extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(540, 420));
         setMinimumSize(new java.awt.Dimension(540, 420));
         setPreferredSize(new java.awt.Dimension(540, 420));
@@ -71,10 +86,20 @@ public class cerrarPrograma extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(237, 149, 148));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(237, 149, 148));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton2.setText("Cerrar turno");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(155, 82, 87));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -111,13 +136,32 @@ public class cerrarPrograma extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 540, 350));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 540, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        //Agregar para cerrar sesion 
+        
+        //Redirigir al login
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        //Agregar menu para confirmar si esta seguro de cerrar programa
+        
+        //Llamar al metodo para realizar el respaldo de la información
+        
+        //Llamar al metodo para cerrar el programa
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

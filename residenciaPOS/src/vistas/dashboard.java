@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.Toolkit;
+import javax.swing.JPanel;
 
 /**
  *
@@ -89,6 +90,11 @@ public class dashboard extends javax.swing.JFrame {
         jButton1.setText("X");
         jButton1.setFocusPainted(false);
         jButton1.setFocusable(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 48)); // NOI18N
@@ -880,6 +886,14 @@ public class dashboard extends javax.swing.JFrame {
     private void btnVerificadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificadorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVerificadorActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        cerrarPrograma a = new cerrarPrograma();
+        
+       a.setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
