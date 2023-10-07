@@ -54,7 +54,6 @@ public class cerrarPrograma extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(540, 420));
         setMinimumSize(new java.awt.Dimension(540, 420));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(540, 420));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

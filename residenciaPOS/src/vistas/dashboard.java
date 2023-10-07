@@ -48,7 +48,6 @@ public class dashboard extends javax.swing.JFrame {
         private void confirmarCierre() {   
                  cerrarPrograma a = new cerrarPrograma();
                  a.setVisible(true);
-                 System.out.println("Metodo confirmarCierre() llamado");
     }
         
     /**
@@ -122,14 +121,14 @@ public class dashboard extends javax.swing.JFrame {
         jlbVenta.setForeground(new java.awt.Color(255, 255, 255));
         jlbVenta.setText("X");
         jlbVenta.setToolTipText("");
-        jPanel3.add(jlbVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, 40));
+        jPanel3.add(jlbVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Venta - Ticket");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 40));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
 
-        panelBackground.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 333000, 40));
+        panelBackground.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 333000, 30));
 
         jPanel2.setBackground(new java.awt.Color(237, 191, 194));
 
@@ -626,7 +625,7 @@ public class dashboard extends javax.swing.JFrame {
                     .addGap(16, 16, 16)))
         );
 
-        panelBackground.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 300000, 80));
+        panelBackground.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 300000, 80));
 
         getContentPane().add(panelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 3000, 3000));
 
@@ -650,7 +649,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnApartadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApartadosActionPerformed
         // TODO add your handling code here:
-        dashboard a = new dashboard();
+        apartados a = new apartados();
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnApartadosActionPerformed
@@ -688,6 +687,9 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
         // TODO add your handling code here:
+        Clientes clientes = new Clientes();
+        clientes.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnClientes1ActionPerformed
 
     private void btnInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseClicked
@@ -720,6 +722,9 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnProductos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductos1ActionPerformed
         // TODO add your handling code here:
+        productos pro = new productos();
+        pro.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnProductos1ActionPerformed
 
     private void btnCorteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseClicked
