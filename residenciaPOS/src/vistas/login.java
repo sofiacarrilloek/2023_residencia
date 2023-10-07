@@ -254,9 +254,15 @@ public class login extends javax.swing.JFrame {
 
     private void btnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederActionPerformed
         // TODO add your handling code here:
-        dashboard a = new dashboard();
+       // dashboard a = new dashboard();
+        //a.setVisible(true);
+        //Agregar metodo para hacer el login y si es exitoso se ejectua lo de abajo
+        
+        dineroCaja a = new dineroCaja();
+         this.setVisible(false);
         a.setVisible(true);
-        this.setVisible(false);
+       
+        
     }//GEN-LAST:event_btnAccederActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
