@@ -25,8 +25,9 @@ public class dashboard extends javax.swing.JFrame {
     /**
      * Creates new form dashboard
      */
-    Color  btnColor= new Color(152,82,87);
-     Color btnColorEntered = new Color(193,142,151);
+        Color  btnColorEntered= new Color(152,82,87);
+        Color btnColorExit = new Color(193,142,151);
+        
     public dashboard() {
         this.setExtendedState(MAXIMIZED_BOTH);
         
@@ -140,9 +141,6 @@ public class dashboard extends javax.swing.JFrame {
         btnApartados.setFocusPainted(false);
         btnApartados.setFocusable(false);
         btnApartados.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnApartadosMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnApartadosMouseEntered(evt);
             }
@@ -164,9 +162,6 @@ public class dashboard extends javax.swing.JFrame {
         btnVentas.setFocusPainted(false);
         btnVentas.setFocusable(false);
         btnVentas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnVentasMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnVentasMouseEntered(evt);
             }
@@ -188,9 +183,6 @@ public class dashboard extends javax.swing.JFrame {
         btnClientes1.setFocusPainted(false);
         btnClientes1.setFocusable(false);
         btnClientes1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnClientes1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnClientes1MouseEntered(evt);
             }
@@ -212,9 +204,6 @@ public class dashboard extends javax.swing.JFrame {
         btnInventario.setFocusPainted(false);
         btnInventario.setFocusable(false);
         btnInventario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnInventarioMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnInventarioMouseEntered(evt);
             }
@@ -236,9 +225,6 @@ public class dashboard extends javax.swing.JFrame {
         btnProductos1.setFocusPainted(false);
         btnProductos1.setFocusable(false);
         btnProductos1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnProductos1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnProductos1MouseEntered(evt);
             }
@@ -260,9 +246,6 @@ public class dashboard extends javax.swing.JFrame {
         btnCorte.setFocusPainted(false);
         btnCorte.setFocusable(false);
         btnCorte.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCorteMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCorteMouseEntered(evt);
             }
@@ -284,9 +267,6 @@ public class dashboard extends javax.swing.JFrame {
         btnReporte.setFocusPainted(false);
         btnReporte.setFocusable(false);
         btnReporte.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnReporteMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnReporteMouseEntered(evt);
             }
@@ -632,19 +612,14 @@ public class dashboard extends javax.swing.JFrame {
         setBounds(0, 0, 1510, 771);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnApartadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnApartadosMouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnApartadosMouseClicked
-
     private void btnApartadosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnApartadosMouseEntered
         // TODO add your handling code here:
-        //btnAcceder.setBackground(btnColorEntered);
+        btnApartados.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnApartadosMouseEntered
 
     private void btnApartadosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnApartadosMouseExited
         // TODO add your handling code heres:
-        //btnAcceder.setBackground(btnColor);
+        btnApartados.setBackground(btnColorExit);
     }//GEN-LAST:event_btnApartadosMouseExited
 
     private void btnApartadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApartadosActionPerformed
@@ -654,10 +629,6 @@ public class dashboard extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnApartadosActionPerformed
 
-    private void btnVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVentasMouseClicked
-
     private void btnVentasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseEntered
         // TODO add your handling code here:
         btnVentas.setBackground(btnColorEntered);
@@ -665,7 +636,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnVentasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseExited
         // TODO add your handling code here:
-        btnVentas.setBackground(btnColor);
+
     }//GEN-LAST:event_btnVentasMouseExited
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
@@ -673,16 +644,14 @@ public class dashboard extends javax.swing.JFrame {
           
     }//GEN-LAST:event_btnVentasActionPerformed
 
-    private void btnClientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClientes1MouseClicked
-
     private void btnClientes1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseEntered
         // TODO add your handling code here:
+        btnClientes1.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnClientes1MouseEntered
 
     private void btnClientes1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseExited
         // TODO add your handling code here:
+        btnClientes1.setBackground(btnColorExit);
     }//GEN-LAST:event_btnClientes1MouseExited
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
@@ -692,32 +661,31 @@ public class dashboard extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnClientes1ActionPerformed
 
-    private void btnInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnInventarioMouseClicked
-
     private void btnInventarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseEntered
         // TODO add your handling code here:
+        btnInventario.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnInventarioMouseEntered
 
     private void btnInventarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseExited
         // TODO add your handling code here:
+        btnInventario.setBackground(btnColorExit);
     }//GEN-LAST:event_btnInventarioMouseExited
 
     private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioActionPerformed
         // TODO add your handling code here:
+        inventario inv = new inventario();
+        inv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnInventarioActionPerformed
-
-    private void btnProductos1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductos1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnProductos1MouseClicked
 
     private void btnProductos1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductos1MouseEntered
         // TODO add your handling code here:
+        btnProductos1.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnProductos1MouseEntered
 
     private void btnProductos1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductos1MouseExited
         // TODO add your handling code here:
+        btnProductos1.setBackground(btnColorExit);
     }//GEN-LAST:event_btnProductos1MouseExited
 
     private void btnProductos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductos1ActionPerformed
@@ -727,36 +695,38 @@ public class dashboard extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnProductos1ActionPerformed
 
-    private void btnCorteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCorteMouseClicked
-
     private void btnCorteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseEntered
         // TODO add your handling code here:
+        btnCorte.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnCorteMouseEntered
 
     private void btnCorteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseExited
         // TODO add your handling code here:
+        btnCorte.setBackground(btnColorExit);
     }//GEN-LAST:event_btnCorteMouseExited
 
     private void btnCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorteActionPerformed
         // TODO add your handling code here:
+        corte cort = new corte();
+        cort.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCorteActionPerformed
-
-    private void btnReporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnReporteMouseClicked
 
     private void btnReporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseEntered
         // TODO add your handling code here:
+        btnReporte.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnReporteMouseEntered
 
     private void btnReporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseExited
         // TODO add your handling code here:
+        btnReporte.setBackground(btnColorExit);
     }//GEN-LAST:event_btnReporteMouseExited
 
     private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
         // TODO add your handling code here:
+        reportes rep = new reportes();
+        rep.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnReporteActionPerformed
 
     private void btnProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductoMouseClicked

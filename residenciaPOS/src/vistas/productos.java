@@ -333,7 +333,9 @@ public class productos extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
-        
+        dashboard dash = new dashboard();
+        dash.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnVentasActionPerformed
 
     private void btnClientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseClicked
@@ -351,6 +353,9 @@ public class productos extends javax.swing.JFrame {
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
         // TODO add your handling code here:
+        Clientes clientes = new Clientes();
+        clientes.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnClientes1ActionPerformed
 
     private void btnInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseClicked
