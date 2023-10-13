@@ -305,9 +305,10 @@ public class dashboard extends javax.swing.JFrame {
                     .addComponent(btnApartados, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnProductos1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -685,40 +686,6 @@ public class dashboard extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnProductos1ActionPerformed
 
-    private void btnCorteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseEntered
-        // TODO add your handling code here:
-        btnCorte.setBackground(btnColorEntered);
-    }//GEN-LAST:event_btnCorteMouseEntered
-
-    private void btnCorteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseExited
-        // TODO add your handling code here:
-        btnCorte.setBackground(btnColorExit);
-    }//GEN-LAST:event_btnCorteMouseExited
-
-    private void btnCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorteActionPerformed
-        // TODO add your handling code here:
-        corte cort = new corte();
-        cort.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCorteActionPerformed
-
-    private void btnReporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseEntered
-        // TODO add your handling code here:
-        btnReporte.setBackground(btnColorEntered);
-    }//GEN-LAST:event_btnReporteMouseEntered
-
-    private void btnReporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseExited
-        // TODO add your handling code here:
-        btnReporte.setBackground(btnColorExit);
-    }//GEN-LAST:event_btnReporteMouseExited
-
-    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
-        // TODO add your handling code here:
-        reportes rep = new reportes();
-        rep.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnReporteActionPerformed
-
     private void btnProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnProductoMouseClicked
@@ -862,6 +829,40 @@ public class dashboard extends javax.swing.JFrame {
     private void btnVerificadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificadorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVerificadorActionPerformed
+
+    private void btnCorteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseEntered
+        // TODO add your handling code here:
+        btnCorte.setBackground(btnColorEntered);
+    }//GEN-LAST:event_btnCorteMouseEntered
+
+    private void btnCorteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseExited
+        // TODO add your handling code here:
+        btnCorte.setBackground(btnColorExit);
+    }//GEN-LAST:event_btnCorteMouseExited
+
+    private void btnCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorteActionPerformed
+        // TODO add your handling code here:
+        corte a = new corte();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCorteActionPerformed
+
+    private void btnReporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseEntered
+        // TODO add your handling code here:
+        btnReporte.setBackground(btnColorEntered);
+    }//GEN-LAST:event_btnReporteMouseEntered
+
+    private void btnReporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseExited
+        // TODO add your handling code here:
+        btnReporte.setBackground(btnColorExit);
+    }//GEN-LAST:event_btnReporteMouseExited
+
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        // TODO add your handling code here:
+        reportes a =  new reportes();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnReporteActionPerformed
 
     /**
      * @param args the command line arguments

@@ -8,6 +8,9 @@ import java.awt.Color;
 import java.awt.Dimension;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.Toolkit;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
 
 /**
  *
@@ -18,11 +21,28 @@ public class corte extends javax.swing.JFrame {
     /**
      * Creates new form dashboard
      */
-    Color  btnColor= new Color(152,82,87);
-     Color btnColorEntered = new Color(193,142,151);
+        Color  btnColorEntered= new Color(152,82,87);
+        Color btnColorExit = new Color(193,142,151);
     public corte() {
         this.setExtendedState(MAXIMIZED_BOTH);
+        // Establece el comportamiento al cerrar la ventana
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+        // Agrega un WindowListener para interceptar el evento de cierre
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                confirmarCierre();
+            }
+        });
+        
         initComponents();
+    }
+
+
+        private void confirmarCierre() {   
+                 cerrarPrograma a = new cerrarPrograma();
+                 a.setVisible(true);
     }
 
    
@@ -40,6 +60,8 @@ public class corte extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        panelCorte = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnApartados = new javax.swing.JButton();
         btnVentas = new javax.swing.JButton();
@@ -48,9 +70,8 @@ public class corte extends javax.swing.JFrame {
         btnProductos1 = new javax.swing.JButton();
         btnCorte = new javax.swing.JButton();
         btnReporte = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -75,6 +96,26 @@ public class corte extends javax.swing.JFrame {
 
         panelBackground.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30000, 80));
 
+        jLabel7.setBackground(new java.awt.Color(89, 89, 89));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("  Corte");
+        jLabel7.setOpaque(true);
+        panelBackground.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1540, 30));
+
+        javax.swing.GroupLayout panelCorteLayout = new javax.swing.GroupLayout(panelCorte);
+        panelCorte.setLayout(panelCorteLayout);
+        panelCorteLayout.setHorizontalGroup(
+            panelCorteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3000, Short.MAX_VALUE)
+        );
+        panelCorteLayout.setVerticalGroup(
+            panelCorteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3000, Short.MAX_VALUE)
+        );
+
+        panelBackground.add(panelCorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 3000, 3000));
+
         jPanel2.setBackground(new java.awt.Color(237, 191, 194));
 
         btnApartados.setBackground(new java.awt.Color(193, 142, 151));
@@ -85,9 +126,6 @@ public class corte extends javax.swing.JFrame {
         btnApartados.setFocusPainted(false);
         btnApartados.setFocusable(false);
         btnApartados.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnApartadosMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnApartadosMouseEntered(evt);
             }
@@ -109,9 +147,6 @@ public class corte extends javax.swing.JFrame {
         btnVentas.setFocusPainted(false);
         btnVentas.setFocusable(false);
         btnVentas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnVentasMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnVentasMouseEntered(evt);
             }
@@ -119,13 +154,8 @@ public class corte extends javax.swing.JFrame {
                 btnVentasMouseExited(evt);
             }
         });
-        btnVentas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVentasActionPerformed(evt);
-            }
-        });
 
-        btnClientes1.setBackground(new java.awt.Color(155, 82, 87));
+        btnClientes1.setBackground(new java.awt.Color(193, 142, 151));
         btnClientes1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnClientes1.setForeground(new java.awt.Color(255, 255, 255));
         btnClientes1.setText("Clientes");
@@ -133,9 +163,6 @@ public class corte extends javax.swing.JFrame {
         btnClientes1.setFocusPainted(false);
         btnClientes1.setFocusable(false);
         btnClientes1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnClientes1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnClientes1MouseEntered(evt);
             }
@@ -157,9 +184,6 @@ public class corte extends javax.swing.JFrame {
         btnInventario.setFocusPainted(false);
         btnInventario.setFocusable(false);
         btnInventario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnInventarioMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnInventarioMouseEntered(evt);
             }
@@ -181,9 +205,6 @@ public class corte extends javax.swing.JFrame {
         btnProductos1.setFocusPainted(false);
         btnProductos1.setFocusable(false);
         btnProductos1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnProductos1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnProductos1MouseEntered(evt);
             }
@@ -197,24 +218,13 @@ public class corte extends javax.swing.JFrame {
             }
         });
 
-        btnCorte.setBackground(new java.awt.Color(193, 142, 151));
+        btnCorte.setBackground(new java.awt.Color(155, 82, 87));
         btnCorte.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnCorte.setForeground(new java.awt.Color(255, 255, 255));
         btnCorte.setText("Corte");
         btnCorte.setBorderPainted(false);
         btnCorte.setFocusPainted(false);
         btnCorte.setFocusable(false);
-        btnCorte.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCorteMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnCorteMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCorteMouseExited(evt);
-            }
-        });
         btnCorte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCorteActionPerformed(evt);
@@ -229,9 +239,6 @@ public class corte extends javax.swing.JFrame {
         btnReporte.setFocusPainted(false);
         btnReporte.setFocusable(false);
         btnReporte.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnReporteMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnReporteMouseEntered(evt);
             }
@@ -275,52 +282,35 @@ public class corte extends javax.swing.JFrame {
                     .addComponent(btnApartados, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnProductos1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         panelBackground.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 2000, 50));
-
-        jLabel7.setBackground(new java.awt.Color(89, 89, 89));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("       Corte");
-        jLabel7.setOpaque(true);
-        panelBackground.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1540, 30));
 
         getContentPane().add(panelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 3000, 3000));
 
         setBounds(0, 0, 1510, 771);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnApartadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnApartadosMouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnApartadosMouseClicked
-
     private void btnApartadosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnApartadosMouseEntered
         // TODO add your handling code here:
-        //btnAcceder.setBackground(btnColorEntered);
+        btnApartados.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnApartadosMouseEntered
 
     private void btnApartadosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnApartadosMouseExited
         // TODO add your handling code heres:
-        //btnAcceder.setBackground(btnColor);
+        btnApartados.setBackground(btnColorExit);
     }//GEN-LAST:event_btnApartadosMouseExited
 
     private void btnApartadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApartadosActionPerformed
         // TODO add your handling code here:
-        corte a = new corte();
+        apartados a = new apartados();
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnApartadosActionPerformed
-
-    private void btnVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseClicked
-        // TODO add your handling code here:
-        btnVentas.setBackground(btnColorEntered);
-    }//GEN-LAST:event_btnVentasMouseClicked
 
     private void btnVentasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseEntered
         // TODO add your handling code here:
@@ -329,26 +319,17 @@ public class corte extends javax.swing.JFrame {
 
     private void btnVentasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseExited
         // TODO add your handling code here:
+        btnVentas.setBackground(btnColorExit);
     }//GEN-LAST:event_btnVentasMouseExited
-
-    private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
-        // TODO add your handling code here:
-        dashboard dash = new dashboard();
-        dash.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnVentasActionPerformed
-
-    private void btnClientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClientes1MouseClicked
 
     private void btnClientes1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseEntered
         // TODO add your handling code here:
-
+        btnClientes1.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnClientes1MouseEntered
 
     private void btnClientes1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseExited
         // TODO add your handling code here:
+        btnClientes1.setBackground(btnColorExit);
     }//GEN-LAST:event_btnClientes1MouseExited
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
@@ -358,68 +339,62 @@ public class corte extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnClientes1ActionPerformed
 
-    private void btnInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnInventarioMouseClicked
-
     private void btnInventarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseEntered
         // TODO add your handling code here:
+        btnInventario.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnInventarioMouseEntered
 
     private void btnInventarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseExited
         // TODO add your handling code here:
+        btnInventario.setBackground(btnColorExit);
     }//GEN-LAST:event_btnInventarioMouseExited
 
     private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioActionPerformed
         // TODO add your handling code here:
+        inventario inv = new inventario();
+        inv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnInventarioActionPerformed
-
-    private void btnProductos1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductos1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnProductos1MouseClicked
 
     private void btnProductos1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductos1MouseEntered
         // TODO add your handling code here:
+        btnProductos1.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnProductos1MouseEntered
 
     private void btnProductos1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductos1MouseExited
         // TODO add your handling code here:
+        btnProductos1.setBackground(btnColorExit);
     }//GEN-LAST:event_btnProductos1MouseExited
 
     private void btnProductos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductos1ActionPerformed
         // TODO add your handling code here:
+        productos pro = new productos();
+        pro.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnProductos1ActionPerformed
-
-    private void btnCorteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCorteMouseClicked
-
-    private void btnCorteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCorteMouseEntered
-
-    private void btnCorteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCorteMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCorteMouseExited
 
     private void btnCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorteActionPerformed
         // TODO add your handling code here:
+        corte a = new corte();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCorteActionPerformed
-
-    private void btnReporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnReporteMouseClicked
 
     private void btnReporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseEntered
         // TODO add your handling code here:
+        btnReporte.setBackground(btnColorEntered);
     }//GEN-LAST:event_btnReporteMouseEntered
 
     private void btnReporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseExited
         // TODO add your handling code here:
+        btnReporte.setBackground(btnColorExit);
     }//GEN-LAST:event_btnReporteMouseExited
 
     private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
         // TODO add your handling code here:
+        reportes a =  new reportes();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnReporteActionPerformed
 
     /**
@@ -480,5 +455,6 @@ public class corte extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel panelBackground;
+    private javax.swing.JPanel panelCorte;
     // End of variables declaration//GEN-END:variables
 }

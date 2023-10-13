@@ -207,9 +207,11 @@
                           <Component id="btnApartados" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="btnProductos1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="btnInventario" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btnCorte" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btnReporte" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="btnVentas" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Component id="btnCorte" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnReporte" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>

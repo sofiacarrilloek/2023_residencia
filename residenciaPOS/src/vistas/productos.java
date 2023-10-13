@@ -111,6 +111,10 @@ public class productos extends javax.swing.JFrame {
         panelDepartamentos = new javax.swing.JPanel();
         tablaProductos1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        ventasPorPer = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        productPromociones = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -740,6 +744,52 @@ public class productos extends javax.swing.JFrame {
 
         panelBackground.add(panelDepartamentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
 
+        ventasPorPer.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel15.setText("Ventas por");
+
+        javax.swing.GroupLayout ventasPorPerLayout = new javax.swing.GroupLayout(ventasPorPer);
+        ventasPorPer.setLayout(ventasPorPerLayout);
+        ventasPorPerLayout.setHorizontalGroup(
+            ventasPorPerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ventasPorPerLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(3377, Short.MAX_VALUE))
+        );
+        ventasPorPerLayout.setVerticalGroup(
+            ventasPorPerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ventasPorPerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15)
+                .addContainerGap(2978, Short.MAX_VALUE))
+        );
+
+        panelBackground.add(ventasPorPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
+
+        productPromociones.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel16.setText("Ventas por");
+
+        javax.swing.GroupLayout productPromocionesLayout = new javax.swing.GroupLayout(productPromociones);
+        productPromociones.setLayout(productPromocionesLayout);
+        productPromocionesLayout.setHorizontalGroup(
+            productPromocionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productPromocionesLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(3377, Short.MAX_VALUE))
+        );
+        productPromocionesLayout.setVerticalGroup(
+            productPromocionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productPromocionesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addContainerGap(2978, Short.MAX_VALUE))
+        );
+
+        panelBackground.add(productPromociones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
+
         getContentPane().add(panelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 3000, 3000));
 
         setBounds(0, 0, 1510, 1261);
@@ -1081,6 +1131,8 @@ public class productos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1106,7 +1158,9 @@ public class productos extends javax.swing.JFrame {
     private javax.swing.JPanel panelBackground;
     private javax.swing.JPanel panelDepartamentos;
     private javax.swing.JPanel panelProductos;
+    private javax.swing.JPanel productPromociones;
     private javax.swing.JPanel tablaProductos;
     private javax.swing.JPanel tablaProductos1;
+    private javax.swing.JPanel ventasPorPer;
     // End of variables declaration//GEN-END:variables
 }
