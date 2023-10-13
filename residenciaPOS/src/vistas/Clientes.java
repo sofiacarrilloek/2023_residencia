@@ -356,11 +356,6 @@ public class Clientes extends javax.swing.JFrame {
         btnClientes1.setBorderPainted(false);
         btnClientes1.setFocusPainted(false);
         btnClientes1.setFocusable(false);
-        btnClientes1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClientes1ActionPerformed(evt);
-            }
-        });
 
         btnInventario.setBackground(new java.awt.Color(193, 142, 151));
         btnInventario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
@@ -566,15 +561,11 @@ public class Clientes extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnVentasActionPerformed
-
-    private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
-        // TODO add your handling code here:
-        Clientes clientes = new Clientes();
-        clientes.setVisible(true);
+        dashboard a = new dashboard();
+        a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_btnClientes1ActionPerformed
+        
+    }//GEN-LAST:event_btnVentasActionPerformed
 
     private void btnInventarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseEntered
         // TODO add your handling code here:

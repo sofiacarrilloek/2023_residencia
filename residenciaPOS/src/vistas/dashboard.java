@@ -169,11 +169,6 @@ public class dashboard extends javax.swing.JFrame {
                 btnVentasMouseExited(evt);
             }
         });
-        btnVentas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVentasActionPerformed(evt);
-            }
-        });
 
         btnClientes1.setBackground(new java.awt.Color(193, 142, 151));
         btnClientes1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
@@ -638,11 +633,6 @@ public class dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_btnVentasMouseExited
-
-    private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
-        // TODO add your handling code here:
-          
-    }//GEN-LAST:event_btnVentasActionPerformed
 
     private void btnClientes1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientes1MouseEntered
         // TODO add your handling code here:
