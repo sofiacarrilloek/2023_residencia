@@ -133,7 +133,7 @@ public class productos extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(300, 100));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 300, 60));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Punto de venta");

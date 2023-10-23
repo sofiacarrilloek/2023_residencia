@@ -96,13 +96,13 @@ public class apartados extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(300, 100));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 300, 60));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Punto de venta");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 450, 80));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 450, 80));
 
-        panelBackground.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30000, 80));
+        panelBackground.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 30000, 80));
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -124,7 +124,7 @@ public class apartados extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        panelBackground.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, 30));
+        panelBackground.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, 30));
 
         jPanel4.setBackground(new java.awt.Color(214, 212, 212));
 
@@ -176,7 +176,7 @@ public class apartados extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        panelBackground.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 3000, 60));
+        panelBackground.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 3000, 60));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -205,7 +205,7 @@ public class apartados extends javax.swing.JFrame {
 
         jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 1360, -1));
 
-        panelBackground.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 3000, 1580));
+        panelBackground.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 3000, 1580));
 
         jPanel2.setBackground(new java.awt.Color(237, 191, 194));
 
@@ -379,7 +379,7 @@ public class apartados extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelBackground.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 2000, 50));
+        panelBackground.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 2000, 50));
 
         getContentPane().add(panelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 3000, 3000));
 

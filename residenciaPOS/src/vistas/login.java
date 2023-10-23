@@ -84,8 +84,8 @@ public class login extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
         btnAcceder = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        btnVerPassword = new javax.swing.JToggleButton();
         jLabel5 = new javax.swing.JLabel();
+        btnVerPassword = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1011, 702));
@@ -113,11 +113,12 @@ public class login extends javax.swing.JFrame {
         fondo_degradadoLayout.setHorizontalGroup(
             fondo_degradadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(fondo_degradadoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(fondo_degradadoLayout.createSequentialGroup()
-                .addComponent(jLabel4)
+                .addGroup(fondo_degradadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(fondo_degradadoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         fondo_degradadoLayout.setVerticalGroup(
@@ -224,6 +225,11 @@ public class login extends javax.swing.JFrame {
         });
         fondo_blanco.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 520, 114, 56));
 
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(117, 117, 117));
+        jLabel5.setText("Usuario:");
+        fondo_blanco.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 204, -1));
+
         btnVerPassword.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnVerPassword.setForeground(new java.awt.Color(153, 153, 153));
         btnVerPassword.setText("Ver");
@@ -236,11 +242,6 @@ public class login extends javax.swing.JFrame {
             }
         });
         fondo_blanco.add(btnVerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 390, -1, 34));
-
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(117, 117, 117));
-        jLabel5.setText("Usuario:");
-        fondo_blanco.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 204, -1));
 
         getContentPane().add(fondo_blanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1011, 702));
 
@@ -305,7 +306,7 @@ public class login extends javax.swing.JFrame {
 
     private void btnVerPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerPasswordActionPerformed
         // TODO add your handling code here:
-        JToggleButton btn = (JToggleButton) evt.getSource();
+   JToggleButton btn = (JToggleButton) evt.getSource();
     if (btn.isSelected()) {
         txtPassword.setEchoChar((char) 0); // Muestra el texto real
     } else {
