@@ -11,7 +11,12 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.border.Border;
 import javax.swing.text.html.StyleSheet;
@@ -30,6 +35,8 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
         
+        residenciapos.CConexion connection = new residenciapos.CConexion();
+        connection.establecerConexion();
     }
         public class fondo_degradado2 extends JPanel{
             
@@ -62,7 +69,45 @@ public class login extends javax.swing.JFrame {
                }
         }
       
+        //Validar usuario
         
+        public void validaUsuario(JTextField usuario, JPasswordField contrasenia){
+    
+        try {
+            ResultSet rs=null;           
+            PreparedStatement ps= null;
+            
+            residenciapos.CConexion objetoConexion = new residenciapos.CConexion();
+            
+            String consulta="select * from users where users.username =(?) and users.password=(?);";
+            ps=objetoConexion.establecerConexion().prepareStatement(consulta);
+            
+            String contra = String.valueOf(contrasenia.getPassword());
+            
+            ps.setString(1, usuario.getText());
+            ps.setString(2,contra);
+            
+            rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                //Oculta la pantalla del login
+                 this.setVisible(false);
+                                  
+                 //
+                 dineroCaja caja = new dineroCaja();
+                 caja.setVisible(true);
+                 
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"El Usuario o contraseña es INCORRECTO", "USUARIO O CONTRASEÑA INCORRECTA", JOptionPane.ERROR_MESSAGE);
+            }
+            
+      
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR: "+e.toString(), "ERROR", JOptionPane.WARNING_MESSAGE);
+        }
+    }
         
          
     /**
@@ -255,14 +300,10 @@ public class login extends javax.swing.JFrame {
 
     private void btnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederActionPerformed
         // TODO add your handling code here:
-       // dashboard a = new dashboard();
-        //a.setVisible(true);
-        //Agregar metodo para hacer el login y si es exitoso se ejectua lo de abajo
-        
-        dineroCaja a = new dineroCaja();
-         this.setVisible(false);
-        a.setVisible(true);
-       
+  
+        //Agregar metodo para hacer el login y si es exitoso abir el menu de caja
+        validaUsuario(txtUser, txtPassword);
+      
         
     }//GEN-LAST:event_btnAccederActionPerformed
 
@@ -302,6 +343,8 @@ public class login extends javax.swing.JFrame {
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
+        dispose();
+        
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnVerPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerPasswordActionPerformed
